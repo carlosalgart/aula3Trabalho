@@ -28,6 +28,7 @@ public class Student implements Serializable {
         this.studentList = studentList;
     }
 
+
     @ManyToMany(mappedBy = "studentList")
     private List<Class> studentList;
 
