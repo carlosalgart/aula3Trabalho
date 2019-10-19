@@ -6,6 +6,8 @@ import br.com.facef.info.exception.Response;
 import br.com.facef.info.model.Class;
 import br.com.facef.info.model.Curse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
@@ -13,6 +15,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -29,6 +32,18 @@ public class ClassController {
     @GetMapping(value ="/listarTodos")
     public ResponseEntity<?> findAll(@PageableDefault(size=10)Pageable pageable){
         return ResponseEntity.ok(classBussiness.findAll(pageable));
+    }
+
+    @GetMapping(value="/listarPagina")
+    public List<Class> getAllClass(@RequestParam(defaultValue = "0", required = false) Integer pageNumber) {
+        Pageable paging = PageRequest.of(pageNumber, 10);//, Sort.by("nome").descending());
+        Page<Class> pagedResult = classBussiness.listapaginada(paging);
+
+        if (pagedResult.hasContent()) {
+            return pagedResult.getContent();
+        } else {
+            return new ArrayList<Class>();
+        }
     }
 
     @GetMapping(value = "/buscarClassePorId/{id}")

@@ -7,6 +7,7 @@ import br.com.facef.info.model.Class;
 
 import br.com.facef.info.repository.ClassRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -49,6 +50,11 @@ public class ClassBussinessImpl implements ClassBussiness {
     public void deleteClass(int id) {
         Class aClass = classRepository.findById(id).get();
         classRepository.delete(aClass);
+    }
+
+    @Override
+    public Page<Class> listapaginada(Pageable pageable) {
+        return classRepository.findAll(pageable);
     }
 
 

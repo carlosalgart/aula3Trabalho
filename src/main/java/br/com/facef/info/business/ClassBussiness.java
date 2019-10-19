@@ -1,7 +1,7 @@
 package br.com.facef.info.business;
 
 import br.com.facef.info.model.Class;
-import br.com.facef.info.model.Curse;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
@@ -12,5 +12,5 @@ public interface ClassBussiness {
     Class createClass(Class p) ;
     Class updateClass(int id, Class p);
     void deleteClass(int id);
-
+    Page<Class> listapaginada(Pageable pageable);
 }
