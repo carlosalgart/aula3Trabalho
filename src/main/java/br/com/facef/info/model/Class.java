@@ -2,6 +2,7 @@ package br.com.facef.info.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 
 @Entity
@@ -20,6 +21,17 @@ public class Class implements Serializable {
     @Column(name = "nome",nullable = false)
     private String nome;
 
+    public List<Student> getStudentList() {
+        return studentList;
+    }
+
+    public void setStudentList(List<Student> studentList) {
+        this.studentList = studentList;
+    }
+
+    @ManyToMany
+    @JoinTable(name="classStudent", joinColumns = @JoinColumn(name ="idClass"), inverseJoinColumns = @JoinColumn(name = "idStudent"))
+    private List<Student> studentList;
 
 
     public Class(int id, String nome) {

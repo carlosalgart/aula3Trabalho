@@ -195,13 +195,3 @@ INSERT INTO `trabalho`.`curse` (`id`, `nome`) VALUES ('10', 'Direito');
 INSERT INTO `trabalho`.`curse` (`id`, `nome`) VALUES ('11', 'Pedagogia');
 INSERT INTO `trabalho`.`curse` (`id`, `nome`) VALUES ('12', 'Administração');
 INSERT INTO `trabalho`.`curse` (`id`, `nome`) VALUES ('13', 'Psicologia');
-
-
-
-
-
-
-
-
-
-

@@ -3,6 +3,7 @@ package br.com.facef.info.model;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -17,6 +18,19 @@ public class Student implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+
+    public List<Class> getStudentList() {
+        return studentList;
+    }
+
+    public void setStudentList(List<Class> studentList) {
+        this.studentList = studentList;
+    }
+
+    @ManyToMany(mappedBy = "studentList")
+    private List<Class> studentList;
+
 
     @Column(name = "nome",nullable = false)
     private String nome;
