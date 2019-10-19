@@ -33,7 +33,7 @@ public class StudentBussinessImpl implements StudentBussiness {
 
     @Override
     public List<Student> findByNome(String nome) {
-        return studentRepository.findByNome(nome);
+        return studentRepository.findByNomeContains(nome);
     }
 
 
