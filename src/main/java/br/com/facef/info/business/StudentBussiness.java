@@ -14,5 +14,5 @@ public interface StudentBussiness {
     Student updateStudent(int id, Student p);
     void deleteStudent(int id);
     Page<Student> listapaginada(Pageable pageable);
-
+    List<Student> findByNome(String nome);
 }

@@ -54,6 +54,16 @@ public class StudentController {
         return ResponseEntity.ok(studentBussiness.findById(id));
     }
 
+    @GetMapping(value = "/buscarAlunoPorNome/{nome}")
+    public ResponseEntity<?> findByNome(@PathVariable String nome){
+        List<Student> students = studentBussiness.findByNome(nome);
+        if (students == null){
+            new Response("Aluno não encontrado no nome " + nome);
+        }
+        return ResponseEntity.ok(studentBussiness.findByNome(nome));
+    }
+
+
     @PostMapping(value ="/criarAluno")
     public ResponseEntity<Student> post(@RequestBody Student student){
         return ResponseEntity.status(HttpStatus.CREATED).body(studentBussiness.createStudent(student));

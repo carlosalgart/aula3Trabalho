@@ -31,6 +31,11 @@ public class StudentBussinessImpl implements StudentBussiness {
         return studentRepository.findById(id).get();
     }
 
+    @Override
+    public List<Student> findByNome(String nome) {
+        return studentRepository.findByNome(nome);
+    }
+
 
     @Override
     public Student createStudent(Student p) {
