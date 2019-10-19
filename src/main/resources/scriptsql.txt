@@ -1,0 +1,163 @@
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
+
+
+-- ************************************** `Class`
+
+CREATE TABLE `Class`
+(
+ `id`   int NOT NULL AUTO_INCREMENT ,
+ `Nome` varchar(50) NOT NULL ,
+
+PRIMARY KEY (`id`),
+UNIQUE KEY `AK1_Product_SupplierId_ProductName` (`Nome`)
+) AUTO_INCREMENT=1 COMMENT='Basic information 
+about Product';
+
+
+
+
+
+
+-- ************************************** `ClassStudent`
+
+CREATE TABLE `ClassStudent`
+(
+ `idClass`   int NOT NULL ,
+ `idStudent` int NOT NULL ,
+
+PRIMARY KEY (`idClass`, `idStudent`),
+KEY `fkIdx_182` (`idClass`),
+CONSTRAINT `FK_182` FOREIGN KEY `fkIdx_182` (`idClass`) REFERENCES `Class` (`id`),
+KEY `fkIdx_188` (`idStudent`),
+CONSTRAINT `FK_188` FOREIGN KEY `fkIdx_188` (`idStudent`) REFERENCES `Student` (`id`)
+);
+
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
+
+
+-- ************************************** `Curse`
+
+CREATE TABLE `Curse`
+(
+ `id`   int NOT NULL AUTO_INCREMENT ,
+ `Nome` varchar(50) NOT NULL ,
+
+PRIMARY KEY (`id`),
+UNIQUE KEY `AK1_Product_SupplierId_ProductName` (`Nome`)
+) AUTO_INCREMENT=1 COMMENT='Basic information 
+about Product';
+
+
+
+
+
+
+-- ************************************** `CurseClass`
+
+CREATE TABLE `CurseClass`
+(
+ `idCurse` int NOT NULL ,
+ `idClass` int NOT NULL ,
+
+PRIMARY KEY (`idCurse`, `idClass`),
+KEY `fkIdx_167` (`idCurse`),
+CONSTRAINT `FK_167` FOREIGN KEY `fkIdx_167` (`idCurse`) REFERENCES `Curse` (`id`),
+KEY `fkIdx_172` (`idClass`),
+CONSTRAINT `FK_172` FOREIGN KEY `fkIdx_172` (`idClass`) REFERENCES `Class` (`id`)
+) COMMENT='Information about
+like Price, Quantity';
+
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
+
+
+-- ************************************** `Matter`
+
+CREATE TABLE `Matter`
+(
+ `id`        int NOT NULL ,
+ `Nome`      varchar(40) NOT NULL ,
+ `idTeacher` int NOT NULL ,
+
+PRIMARY KEY (`id`),
+UNIQUE KEY `AK1_Supplier_CompanyName` (`Nome`),
+KEY `fkIdx_137` (`idTeacher`),
+CONSTRAINT `FK_137` FOREIGN KEY `fkIdx_137` (`idTeacher`) REFERENCES `Teacher` (`id`)
+) COMMENT='Basic information 
+about Supplier';
+
+
+
+
+
+
+-- ************************************** `MatterCurse`
+
+CREATE TABLE `MatterCurse`
+(
+ `idCurse`  int NOT NULL ,
+ `idMatter` int NOT NULL ,
+
+PRIMARY KEY (`idCurse`, `idMatter`),
+KEY `FK_OrderItem_ProductId_Product` (`idCurse`),
+CONSTRAINT `FK_OrderItem_ProductId_Product` FOREIGN KEY `FK_OrderItem_ProductId_Product` (`idCurse`) REFERENCES `Curse` (`id`),
+KEY `fkIdx_154` (`idMatter`),
+CONSTRAINT `FK_154` FOREIGN KEY `fkIdx_154` (`idMatter`) REFERENCES `Matter` (`id`)
+) COMMENT='Information about
+like Price, Quantity';
+
+
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
+
+
+-- ************************************** `Teacher`
+
+CREATE TABLE `Teacher`
+(
+ `id`             int NOT NULL AUTO_INCREMENT ,
+ `Nome`           varchar(40) NOT NULL ,
+ `cpf`            varchar(20) NOT NULL ,
+ `dataNascimento` datetime NOT NULL ,
+
+PRIMARY KEY (`id`),
+UNIQUE KEY `AK1_Order_OrderNumber` (`Nome`)
+) AUTO_INCREMENT=1 COMMENT='Order information
+like Date, Amount';
+
+
+
+
+
+
+-- ************************************** `Student`
+
+CREATE TABLE `Student`
+(
+ `id`             int NOT NULL ,
+ `Nome`           varchar(40) NOT NULL ,
+ `cpf`            varchar(20) NOT NULL ,
+ `dataNascimento` datetime NOT NULL ,
+
+PRIMARY KEY (`id`),
+UNIQUE KEY `AK1_Customer_CustomerName` (`Nome`)
+) COMMENT='Basic information 
+about Customer';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
