@@ -8,6 +8,7 @@ import br.com.facef.info.model.Matter;
 import br.com.facef.info.repository.ClassRepository;
 import br.com.facef.info.repository.MatterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -52,5 +53,9 @@ public class MatterBussinessImpl implements MatterBussiness {
         matterRepository.delete(matter);
     }
 
+    @Override
+    public Page<Matter> listapaginada(Pageable pageable) {
+        return matterRepository.findAll(pageable);
+    }
 
 }

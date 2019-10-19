@@ -17,6 +17,11 @@ public class Matter implements Serializable {
     @Column(name = "nome",nullable = false)
     private String nome;
 
+
+
+    @Column(name ="idTeacher", nullable = false)
+    private Teacher teacher;
+
     public Matter() {
     }
 
@@ -40,5 +45,13 @@ public class Matter implements Serializable {
     public void setNome(String nome) {
 
         this.nome = nome;
+    }
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 }

@@ -4,6 +4,7 @@ import br.com.facef.info.business.StudentBussiness;
 import br.com.facef.info.model.Student;
 import br.com.facef.info.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -49,6 +50,11 @@ public class StudentBussinessImpl implements StudentBussiness {
     public void deleteStudent(int id) {
         Student student = studentRepository.findById(id).get();
         studentRepository.delete(student);
+    }
+
+    @Override
+    public Page<Student> listapaginada(Pageable pageable) {
+       return studentRepository.findAll(pageable);
     }
 
 

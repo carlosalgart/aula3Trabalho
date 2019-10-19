@@ -5,6 +5,7 @@ import br.com.facef.info.business.CurseBussiness;
 import br.com.facef.info.model.Curse;
 import br.com.facef.info.repository.CurseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -49,5 +50,9 @@ public class CurseBussinessImpl implements CurseBussiness {
         curseRepository.delete(curse);
     }
 
+    @Override
+    public Page<Curse> listapaginada(Pageable pageable) {
+        return curseRepository.findAll(pageable);
+    }
 
 }

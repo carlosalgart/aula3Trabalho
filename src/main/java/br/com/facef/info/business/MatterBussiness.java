@@ -2,6 +2,7 @@ package br.com.facef.info.business;
 
 import br.com.facef.info.model.Class;
 import br.com.facef.info.model.Matter;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
@@ -12,5 +13,6 @@ public interface MatterBussiness {
     Matter createMatter(Matter m) ;
     Matter updateMatter(int id, Matter m);
     void deleteMatter(int id);
+    Page<Matter> listapaginada(Pageable pageable);
 
 }
