@@ -1,0 +1,16 @@
+package br.com.facef.info.business;
+
+import br.com.facef.info.model.Student;
+import org.springframework.data.domain.Pageable;
+
+
+import java.util.List;
+
+public interface StudentBussiness {
+    List<Student> findAll(Pageable pageable);
+    Student findById(int id);
+    Student createStudent(Student p) ;
+    Student updateStudent(int id, Student p);
+    void deleteStudent(int id);
+
+}
