@@ -195,3 +195,55 @@ INSERT INTO `trabalho`.`curse` (`id`, `nome`) VALUES ('10', 'Direito');
 INSERT INTO `trabalho`.`curse` (`id`, `nome`) VALUES ('11', 'Pedagogia');
 INSERT INTO `trabalho`.`curse` (`id`, `nome`) VALUES ('12', 'Administração');
 INSERT INTO `trabalho`.`curse` (`id`, `nome`) VALUES ('13', 'Psicologia');
+
+
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('1', '1', 'Banco de dados relacional');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('2', '2', 'Desenvolvimento Mobile');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('3', '3', 'UX/UI');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('4', '3', 'Gerencia de projetos');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('5', '4', 'Analise de sistemas');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('6', '1', 'Pesos[bolivares] e medidas');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('7', '1', 'Engenharia do que sobe e do que cai');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('8', '7', 'Anatomia humana');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('9', '8', 'Etica Médica');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('10', '9', 'Direto civil/contabil/criminal');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('11', '9', 'Analise cognitiva');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('12', '10', 'Matematica básica');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('13', '10', 'Auditorias');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('14', '2', 'Contabilidade computacional');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('15', '1', 'Psicanalise humana');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('16', '10', 'Estatistica');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('17', '5', 'Portugues básico');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('18', '5', 'ABNT Padrões');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('19', '6', 'Ingles');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('20', '6', 'Linguas diversas básicas');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('21', '7', 'Conceitos de saúde');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('22', '1', 'Engenharia de processos');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('23', '2', 'Analise analitica');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('24', '2', 'Urgencia e emergencia médica');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('25', '3', 'Meios de Comunicação');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('26', '3', 'publicidade mundial');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('27', '8', 'Estruturação web');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('28', '8', 'Biologia');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('29', '9', 'Quimica');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('30', '9', 'Dinamica e Graficos');
+INSERT INTO `trabalho`.`matter` (`id`, `id_teacher`, `nome`) VALUES ('31', '12', 'Gerencia bancária');
+
+
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('1', 'Sistemas de Informação 2019 - A');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('2', 'Sistemas de Informação 2019 - B');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('3', 'Ciência da Computação 2019 - A');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('4', 'Ciência da Computação 2019 - B');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('5', 'Medicina 2019 - A');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('6', 'Medicina 2019 - B');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('7', 'Medicina 2019 - C');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('8', 'Medicina 2019 - D');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('9', 'Enfermagem 2019 - A');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('10', 'Matematica 2019 - A');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('11', 'Direito 2019 - A');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('12', 'Direito 2019 - B');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('13', 'Letras 2019 - A');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('14', 'Psicologia 2019 - A');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('15', 'Pedagogia 2019 - A');
+INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('16', 'Administracao 2019 - A');
+
