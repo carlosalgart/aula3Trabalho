@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.util.Date;
 
-@Entity
+//@Entity
 @Table(name = "professorMensalista")
 public class ProfessorMensalista extends Professor {
 

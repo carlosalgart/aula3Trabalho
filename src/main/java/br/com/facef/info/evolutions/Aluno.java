@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import java.util.Date;
 
-@Entity
+//@Entity
 @PrimaryKeyJoinColumn(name = "id")
 public class Aluno extends Pessoa {
 

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
-@Entity
+//@Entity
 @Table(name = "pessoa")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Pessoa implements Serializable {

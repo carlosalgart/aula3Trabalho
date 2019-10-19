@@ -6,7 +6,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 import java.util.Date;
 
-@Entity
+//@Entity
 @Table(name = "professor")
 @PrimaryKeyJoinColumn(name = "id")
 public class Professor extends Pessoa {
