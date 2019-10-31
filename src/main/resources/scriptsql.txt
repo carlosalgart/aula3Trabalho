@@ -247,3 +247,4 @@ INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('14', 'Psicologia 2019 - A
 INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('15', 'Pedagogia 2019 - A');
 INSERT INTO `trabalho`.`class` (`id`, `nome`) VALUES ('16', 'Administracao 2019 - A');
 
+INSERT INTO `class_student`.`class` (`id`, `nome`) VALUES ('16', 'Administracao 2019 - A');
