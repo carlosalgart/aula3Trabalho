@@ -8,11 +8,11 @@
 		<version>2.1.8.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.facef</groupId>
-	<artifactId>aula3</artifactId>
+	<groupId>br.com.gurgelmix.gko</groupId>
+	<artifactId>GKO</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>aula3</name>
-	<description>Projeto desenvolvido na aula 3 sobre spring boot</description>
+	<name>GKO</name>
+	<description>Projeto integracao GKO</description>
 
 	<properties>
 		<java.version>1.8</java.version>

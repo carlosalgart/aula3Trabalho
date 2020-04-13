@@ -1,4 +1,4 @@
-package br.com.facef.info;
+package br.com.gurgelmix.gko.info;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
