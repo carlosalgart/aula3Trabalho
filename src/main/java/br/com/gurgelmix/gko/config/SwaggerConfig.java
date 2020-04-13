@@ -34,11 +34,11 @@ public class SwaggerConfig {
     }
 
     private Predicate<RequestHandler> apis() {
-        return RequestHandlerSelectors.basePackage("br.com.facef.info.controller");
+        return RequestHandlerSelectors.basePackage("br.com.gurgelmix.gko.info.controller");
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("Trabalho Unifacef - Escolas").description("Documentação da API Escolas").version("v1").build();
+        return new ApiInfoBuilder().title("GurgelMix - GKO").description("Documentação da API Integração GKO").version("v1").build();
     }
 
     private List<ResponseMessage> responseMessageForGET() {
